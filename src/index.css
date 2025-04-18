@@ -1,0 +1,14 @@
+/*index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #d5c1f4; /* 💜 Light purple background */
+  color: #1a1a1a;            /* Dark text for readability */
+}
+
+
