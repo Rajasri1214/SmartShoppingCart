@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import "../styles/LandingPage.css";
 import cartImage from "../assets/images/shop.jpg"; 
-import Nav from "../Components/Nav"; // Import your Nav component
-import "../styles/Button.css"; // Import button styles
+import Nav from "../Components/Nav"; 
+import "../styles/Button.css"; 
 
 const LandingPage = () => {
   return (

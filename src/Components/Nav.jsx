@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import "../styles/Nav.css";
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -20,7 +21,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Smart Shopping Cart</div>
+      <div className="logo">
+        <img src={logo} alt="Logo" className="logo-img" />        
+        Smart Shopping Cart</div>
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <FaTimes /> : <FaBars />}
       </div>

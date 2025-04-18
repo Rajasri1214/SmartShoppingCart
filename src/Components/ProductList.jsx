@@ -2,7 +2,7 @@ import "../styles/ProductList.css";
 const products = [
   { id: "p1", name: "Milk", price: 20 },
   { id: "p2", name: "Rice", price: 120 },
-  { id: "p3", name: "Oil", price: 150 },
+  { id: "p3", name: "Diary Milk", price: 90 },
   { id: "p4", name: "Bread", price: 30 },
 ];
 
