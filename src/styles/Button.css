@@ -1,0 +1,49 @@
+:root {
+  --btn-radius: 8px;
+  --btn-purple-main: #8e24aa;       /* Main purple */
+  --btn-purple-hover: #4a148c;      /* Dark purple on hover */
+  --btn-text-color: #ffffff;
+}
+
+/* Purple button style */
+.button {
+  background-color: var(--btn-purple-main) !important;
+  border: 1px solid var(--btn-purple-main) !important;
+  color: var(--btn-text-color) !important;
+  border-radius: var(--btn-radius) !important;
+  padding: 0.75rem 1.5rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: none !important;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  height: auto !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  box-shadow: none !important; /* No shadow on default */
+}
+
+/* Hover effect - dark purple, no shadow */
+.button:hover {
+  background-color: var(--btn-purple-hover) !important;
+  border-color: var(--btn-purple-hover) !important;
+  box-shadow: none !important;
+  color: var(--btn-text-color) !important;
+}
+
+/* Fix for MUI buttons */
+.MuiButton-root.button {
+  padding: 0.75rem 1.5rem !important;
+  min-width: unset !important;
+}
+
+/* Responsive width fix */
+@media (min-width: 768px) {
+  .button {
+    width: auto !important;
+  }
+}
+
+  

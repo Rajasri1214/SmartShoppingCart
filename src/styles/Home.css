@@ -1,0 +1,129 @@
+
+/* In Home.css */
+.home-container {
+  background-color: transparent;
+  padding-top: 70px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right bottom, #ba68c8, #8e24aa); /* Purple gradient */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/cartGirl.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);  /* Lighter blur */
+  z-index: 0;
+  opacity: 0.9; /* Slight opacity to maintain clarity */
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  max-width: 600px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #4a148c;
+}
+
+.hero-overlay p {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #4a148c;
+  font-weight: 400 !important;
+}
+
+.hero-overlay button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #8e24aa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-overlay button:hover {
+  background-color: #4a148c; /* Darker purple */
+}
+
+/* Feature & How-it-works Sections */
+.features-section, .how-it-works-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: transparent; /* Let body background show */
+}
+
+.features-section h2, .how-it-works-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #4a148c; /* Dark purple */
+}
+
+.feature-cards, .how-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card, .how-card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 1.1rem;
+  font-weight: 500;
+  max-width: 250px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #333;
+}
+
+.feature-card:hover, .how-card:hover {
+  transform: translateY(-5px);
+  background-color: #f3e5f5; /* Light hover effect */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .feature-cards, .how-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-overlay {
+    padding: 20px;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,105 @@
+/* Payment Container */
+.payment-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background:#CDADEF;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Heading */
+.payment-page h2 {
+  color: #4a148c;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* Bill Summary */
+.bill-container {
+  background-color: #f9f3fd;
+  padding: 25px 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  border: 1px solid #e3d4f5;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+.item-list li {
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 1px dashed #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Total */
+.bill-container h3 {
+  color: #4caf50;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+/* Payment Section */
+.payment-section h3 {
+  margin-bottom: 12px;
+  color: #4a148c;
+  font-size: 20px;
+}
+
+.payment-section p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Payment Confirmation */
+.payment-confirmation {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.payment-confirmation input {
+  margin-right: 10px;
+}
+
+/* Payment Done Button */
+.done-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #4a148c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.done-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.done-btn:hover {
+  background-color: #6a1b9a;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+
+  
