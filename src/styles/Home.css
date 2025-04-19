@@ -1,8 +1,9 @@
 
 /* In Home.css */
 .home-container {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
   background-color: transparent;
-  padding-top: 70px;
 }
 
 /* Hero Section */
@@ -23,7 +24,7 @@
   background-image: url("../assets/images/cartGirl.jpg");
   background-size: cover;
   background-position: center;
-  filter: blur(3px);  /* Lighter blur */
+  filter: blur(1px);  /* Lighter blur */
   z-index: 0;
   opacity: 0.9; /* Slight opacity to maintain clarity */
 }

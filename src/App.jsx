@@ -9,6 +9,7 @@ import ProductList from "./Components/ProductList";
 import Payment from "./Components/Payment";
 import PrivateRoute from "./Components/PrivateRoute";
 import { AuthProvider } from "./context/AuthContext";
+import Layout from "./Components/Layout";
 import "./index.css";
 
 function App() {
@@ -22,39 +23,19 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgetPassword />} />
 
-          {/* Protected Routes */}
+          {/* Protected Routes with shared Layout */}
           <Route
-            path="/home"
             element={
               <PrivateRoute>
-                <Home />
+                <Layout /> {/* Layout includes Navbar + <Outlet /> */}
               </PrivateRoute>
             }
-          />
-          <Route
-            path="/cart"
-            element={
-              <PrivateRoute>
-                <Cart />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/products"
-            element={
-              <PrivateRoute>
-                <ProductList />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/payment"
-            element={
-              <PrivateRoute>
-                <Payment />
-              </PrivateRoute>
-            }
-          />
+          >
+            <Route path="/home" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/products" element={<ProductList />} />
+            <Route path="/payment" element={<Payment />} />
+          </Route>
         </Routes>
       </AuthProvider>
     </Router>

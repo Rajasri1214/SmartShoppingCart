@@ -29,7 +29,7 @@ const Payment = () => {
   }, []);
 
   // Customize your UPI deep link
-  const upiLink = `upi://pay?pa=rajasri12567@oksbi&pn=SmartCart&am=${totalAmount}&cu=INR`;
+  const upiLink = `upi://pay?pa=pg649599@oksbi&pn=SmartCart&am=${totalAmount}&cu=INR`;
 
   return (
     <div className="payment-page">

@@ -27,7 +27,7 @@ const Home = () => {
         <div className="hero-overlay">
           <h1>Welcome, {userName}!</h1>
           <p>Experience a smarter way to shop - No Queues, No Hassles!</p>
-          <button onClick={() => navigate("/products")}>Start Shopping</button>
+          <button onClick={() => navigate("/cart")}>Start Shopping</button>
         </div>
       </section>
 
