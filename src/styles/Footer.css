@@ -1,0 +1,43 @@
+/* src/styles/Footer.css */
+
+/* Make sure root containers occupy full height for footer positioning */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Main layout wrapper */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Only style the footer, not the nav or outlet */
+  .footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom when content is less */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
