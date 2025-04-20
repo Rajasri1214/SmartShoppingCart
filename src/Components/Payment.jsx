@@ -29,7 +29,7 @@ const Payment = () => {
   }, []);
 
   // Customize your UPI deep link
-  const upiLink = `upi://pay?pa=pg649599@oksbi&pn=PRADEEP G&am=${totalAmount}&cu=INR`;
+  const upiLink = `upi://pay?pa=pg649599@oksbi&pn=${encodeURIComponent("PRADEEP G")}&am=${totalAmount}&cu=INR`;
 
   return (
     <div className="payment-page">
