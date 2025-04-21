@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import { database } from "../firebase";
+import QRCODE from "../assets/images/qr.jpg";
 import "../styles/Payment.css";
 
 const Payment = () => {
@@ -23,13 +24,13 @@ const Payment = () => {
       }
     });
 
-    // Check if it's a mobile device
     const checkMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
     setIsMobile(checkMobile);
   }, []);
 
-  // Customize your UPI deep link
-  const upiLink = `upi://pay?pa=pg649599@oksbi&pn=${encodeURIComponent("PRADEEP G")}&am=${totalAmount}&cu=INR`;
+  const upiLink = `upi://pay?pa=rajasri12567@oksbi&pn=${encodeURIComponent(
+    "Rajasri R"
+  )}&am=${totalAmount}&cu=INR`;
 
   return (
     <div className="payment-page">
@@ -51,27 +52,32 @@ const Payment = () => {
       )}
 
       <div className="payment-section">
-        <h3>{isMobile ? "Pay via UPI App" : "Pay via UPI or Online Payment"}</h3>
+        <h3>{isMobile ? "Pay via UPI App" : "Scan QR or Use UPI ID"}</h3>
         <p>
           {isMobile
             ? "Click the button below to open your UPI app and complete the payment."
-            : "Click the button below to complete your payment."}
+            : "Scan the QR code or copy the UPI ID to pay using your UPI app."}
         </p>
 
-        <a href={upiLink} target="_blank" rel="noopener noreferrer">
-          <button className="pay-btn">
-            Pay ₹{totalAmount} Now
-          </button>
-        </a>
+        {isMobile ? (
+          <a href={upiLink} target="_blank" rel="noopener noreferrer">
+            <button className="pay-btn">Pay ₹{totalAmount} Now</button>
+          </a>
+        ) : (
+          <div className="qr-code-section">
+            <img
+              src={QRCODE}
+              alt="Static UPI QR Code"
+              style={{ width: "200px", height: "200px", marginTop: "1rem" }}
+            />
+            {/* <p style={{ marginTop: "0.5rem" }}>
+              UPI ID: <strong>pg649599@oksbi</strong>
+            </p> */}
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default Payment;
-
-
-
-
-
-
